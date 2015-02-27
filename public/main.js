@@ -1,10 +1,9 @@
-var select = document.getElementById("langa");
-var options = ["1", "2", "3", "4", "5"];
-
-for(var i = 0; i < options.length; i++) {
-    var opt = options[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    select.appendChild(el);
-}
+$(document).on('ready', function(){
+        $("#submit").on('click', function(e){
+            e.preventDefault();
+            var words = $('#words').val()
+            $.post('/theTranslation', {words: words}, function(dataFromServer){
+                console.log(dataFromServer);
+            });
+        });
+});

@@ -8,14 +8,14 @@ block content
     section
         form
             select#langa
-                for item in languages
-                    option= item 
+                option English
+                option Spanish
             
             
             select#langb
-                option Lang A
-                option Lang B
+                option Spanish
+                option English
                 
-            textarea
+            textarea#words
             
-            input.btn(type="submit" value="Translate")
+            input.btn(type="submit", id="submit" value="Translate")
