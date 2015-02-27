@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1 Translate
+    
+    p Please select the language you would like to translate from and to.
+    
+    section
+        form
+            select#langa
+                for item in languages
+                    option= item 
+            
+            
+            select#langb
+                option Lang A
+                option Lang B
+                
+            textarea
+            
+            input.btn(type="submit" value="Translate")
